@@ -39,8 +39,15 @@ textBox.addEventListener("keydown", (event) => {
     console.log(`You pressed "${event.key}".`);
 });
 
-
-
+/* Return values -> values that a function returns when it is complete
+ *
+ * Some functions dont return any value. We list the return value as void or undefined
+*/
+function random(number){
+    const result = Math.floor(Math.random())
+    return result;
+}
+alert(result);
 
 /*
  * 
