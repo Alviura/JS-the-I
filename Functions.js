@@ -57,3 +57,44 @@ alert(result);
  * Operations on pieces of text (known as "strings" in programming). 
  * Running code in response to certain events occurring on a web page. 
 */
+
+// Parameters & Arguments
+function showMessage(from, text){
+    alert(from + ': ' + text);
+}
+showMessage('Ann', 'Hello!'); //Ann: Hello
+showMessage('Alvin','wtf');
+
+// Local variable -> A variable declared inside a function
+function displayMessage(){
+    let message = "Hello, I'm Javascript";
+    alert(message);
+
+}
+showMessage(); // Hello , I'm Javascript!
+alert(message); // Error! the variable is local to the function
+
+// Outer variables: A function can access an outer variable as well
+// an outer variable is only used if there's no local one
+let userName = 'John';
+
+function theMessage(){
+    userName = 'Bob'; //Changed the outer variable
+
+    let display = 'Hello, ' + userName;
+    alert(display);
+}
+
+alert(userName) // John before the function call
+theMessage()
+alert(userName) //Bob, the value is modified by the function
+
+// Default values -> when a function is called, but no argument is provided, then the corresponding value becomes undefined
+showMessage("Ann"); // Ann: undefined
+
+// we can set the default value to what we want
+function isMessage(from, text = "no text given"){
+    alert(from + ': ' + text);
+}
+isMessage("Anne"); // Ann: no text is given
+
