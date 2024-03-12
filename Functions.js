@@ -98,3 +98,40 @@ function isMessage(from, text = "no text given"){
 }
 isMessage("Anne"); // Ann: no text is given
 
+function theMessage(from, text){
+    if(text === undefined){
+        text = 'message cannot be null';
+    }
+    alert(text = ': ' + text)
+}
+theMessage('Alvin'); // Alvin: message cannot be null
+
+/* Returning a value
+ * A function can return a value back into the calling code as the result
+ * The directive return can be in any place of the functio. When the execution
+ * reaches it, the function stops, and the valu is returned to the calling code (assigned to result above)
+*/
+function sum(a,b){
+    return a + b
+}
+let result = sum(1, 2)
+alert(result)
+
+// If a function does not have a return value, it is the same as if it returns undefined
+function doNothing(){
+    return;
+}
+alert(doNothing() === undefined); //true
+
+
+/* Naming a function
+ * Functions are actions. So their name is usually a verb. It should be breif, as accurate as possible and
+ * describe what the function does, so that someine reading the code gets an indication of what the function does.
+ * It is a widespread practice to start a function with a verbal prefix whic vaguely describes the action.
+ * There must be an agreement within the team on the meaning of the prefixes
+ * 
+ * Functions starting with...
+ * "get.." -> returns a value
+ * "calc.." -> calculate something
+ * "create.." -> create something
+ * "check.." -> check something and return a boolean
