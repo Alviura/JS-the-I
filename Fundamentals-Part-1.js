@@ -46,6 +46,7 @@ but == ignores the dataype of the variables while === checks it
 let b = 23;
 let c = "23";
 
+// Returns true
 if (b==c){
     alert("true");
 }
@@ -53,6 +54,7 @@ else{
     alert("false");
 }
 
+// Returns false
 if (b===c){
     alert("true");
 }
